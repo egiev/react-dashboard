@@ -14,23 +14,18 @@ class App extends Component {
 	}
 
 	toggleSidebar(){
-		if(this.state.isToggled) {
-			this.setState({isToggled: false});
-		} else {
-			this.setState({isToggled: true});
-		}
+		(this.state.isToggled) ? this.setState({isToggled: false}) : this.setState({isToggled: true})
 	}
 
 	render(){
 		const isToggled = (this.state.isToggled) ? 'toggle': '';
 		const children = this.props.children;
 
-		console.log(isToggled);
 		return(
 			<div className={`app ${isToggled}`}>
 				<Sidebar />
 				<div className="content">
-					<ContentNavbar />
+					<ContentNavbar onClick={this.toggleSidebar.bind(this)}/>
 					{children}
 				</div>
 			</div>		
