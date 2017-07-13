@@ -1,0 +1,72 @@
+$sidebar_width: 250px;
+
+.app {
+	padding-left: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+
+  > .sidebar {
+  	position: fixed;
+    left: $sidebar_width;
+    width: $sidebar_width;
+    height: 100%;
+    margin-left: -($sidebar_width);
+		background: #101b36;
+    z-index: 1000;
+    overflow-y: auto;
+		-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+	> .content {
+			width: 100%;
+			position: absolute;
+			padding: 60px 15px;
+	}
+
+	&.toggle{
+		> .sidebar {
+			width: $sidebar_width;
+		}
+
+		> .content {
+			position: absolute;
+			margin-right: -($sidebar_width);
+		}
+	}
+
+}
+
+@media(min-width: 768px){
+	.app{
+		padding-left: $sidebar_width;
+
+		> .sidebar {
+			width: $sidebar_width;
+		}
+
+		> .content {
+			position: relative;
+		}
+
+		&.toggle {
+			padding-left: 0;
+
+			> .sidebar {
+				width: $sidebar_width;
+				left: 0	;
+				overflow: hidden;
+			}
+
+			> .content {
+				position: relative;
+				margin-right: 0;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,74 @@
+.sidebar{
+  > .logo {
+    max-height: 80px;
+    height: 100%;
+
+    > img {
+      max-height: 80px;
+      display: block;
+      margin: auto;
+    }
+
+    > p {
+      color: #fff;
+      font-size: 24px;
+      line-height: 80px;
+      text-align: center;
+    }
+  }
+
+	> ul {
+		padding: 0;
+		list-style: none;
+		
+		> li {
+
+      > a {
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        padding: 15px 30px;
+        text-decoration: none;
+        transition: all .7s ease;
+        position: relative;
+
+          > span.fa {
+            margin-right: 10px;
+            color: #2a57c5;
+            width: 12px;
+          }
+      }
+
+      > a:hover {
+        background: rgba(255, 255, 255, 0.01);
+
+          &:before {
+            content: " ";
+            display: block;
+            width: 3px;
+            height: 47px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2a57c5;
+          }
+      }
+
+      > a.active {
+        background: rgba(255, 255, 255, 0.01);
+
+          &:before {
+            content: " ";
+            display: block;
+            width: 3px;
+            height: 47px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2a57c5;
+          }
+      }
+
+		}
+	}
+}
