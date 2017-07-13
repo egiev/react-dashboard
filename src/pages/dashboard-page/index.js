@@ -9,11 +9,11 @@ const Dashboard = () => {
     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
     datasets: [{
       label: 'apples',
-      data: [12, 19, 3, 17, 6, 3, 7],
+      data: Array.from({length: 7}, () => Math.floor(Math.random() * 20)),
       backgroundColor: '#002070'
     }, {
       label: 'oranges',
-      data: [2, 29, 5, 5, 2, 3, 10],
+      data: Array.from({length: 7}, () => Math.floor(Math.random() * 20)),
       backgroundColor: '#002A92'
     }]
   };
@@ -49,24 +49,24 @@ const Dashboard = () => {
   }
 
 	return(
-		<section>
-			<h3>Dashboard</h3>
+    <section>
+      <h3>Dashboard</h3>
 
-			<Section sm5>
+      <Section sm5>
         <p>Sales</p>
         <ChartContainer>
-				  <Doughnut data={doughnut_data} options={doughnut_option} height={220}></Doughnut>
+          <Doughnut data={doughnut_data} options={doughnut_option} height={220}></Doughnut>
         </ChartContainer>
-			</Section>
+      </Section>
 
-			<Section sm7>
-        <p>Reports</p>
+      <Section sm7>
+      <p>Reports</p>
         <ChartContainer>
-				  <Line data={line_data} options={line_option} height={220}></Line>
+          <Line data={line_data} options={line_option} height={220}></Line>
         </ChartContainer>
-			</Section>
+      </Section>
 
-			<Section sm4>
+      <Section sm4>
         <p>Task</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
@@ -74,29 +74,29 @@ const Dashboard = () => {
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
         et veniam quod totam aperiam deserunt distinctio ad assumenda nihil atque, culpa facere quo temporibus ipsum. Similique, impedit!</p>
-			</Section>
+      </Section>
 
-			<Section sm4>
+      <Section sm4>
         <p>Messages</p>
-        
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
         et veniam quod totam aperiam deserunt distinctio ad assumenda nihil atque, culpa facere quo temporibus ipsum. Similique, impedit!</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
         et veniam quod totam aperiam deserunt distinctio ad assumenda nihil atque, culpa facere quo temporibus ipsum. Similique, impedit!</p>
-			</Section>
+      </Section>
 
-			<Section sm4>
+      <Section sm4>
         <p>Activity</p>
-        
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
         et veniam quod totam aperiam deserunt distinctio ad assumenda nihil atque, culpa facere quo temporibus ipsum. Similique, impedit!</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laudantium sint modi, 
         et veniam quod totam aperiam deserunt distinctio ad assumenda nihil atque, culpa facere quo temporibus ipsum. Similique, impedit!</p>
-			</Section>
+      </Section>
 
-		</section>
+    </section>
 	)
 }
 
