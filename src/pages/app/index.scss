@@ -1,4 +1,4 @@
-$sidebar_width: 250px;
+$sidebar_width: 300px;
 
 .app {
 	padding-left: 0;
@@ -68,5 +68,20 @@ $sidebar_width: 250px;
 			}
 		}
 
+	}
+}
+
+@media(max-width: 425px) {
+	.app {
+		> .sidebar {
+			left: 0;
+		}
+
+		&.toggle {
+
+			> .sidebar {
+				left: $sidebar_width;
+			}
+		}
 	}
 }
